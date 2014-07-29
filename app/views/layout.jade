@@ -11,8 +11,10 @@ html(lang="en")
     meta(property='og:url', content='http://submit.0p3nr3p0.net')
     link(rel='icon', type='image/x-icon', href='/favicon.ico')
     block css
-      != css('styles.css')
-      != css('submit.css')
+      link(rel='stylesheet', href='/css/styles.css')
+      link(rel='stylesheet', href='/css/submit.css')
+      //- != css('styles.css')
+      //- != css('submit.css')
 
   block body
     body(data-view="#{view}")
