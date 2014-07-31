@@ -10,7 +10,7 @@ block content
         a(href='/', style='border:none;margin-right:30px;') submit
         a(href='http://0p3nr3p0.net/curate', style='border:none;') curate
   .underHead
-  form#create-link
+  form(onsubmit="return false;")#create-link
     p.nfo
       img(src='/img/glitchicago.jpg', style='float:left;margin:20px;')
       | There are no usernames + no passwords
@@ -47,8 +47,15 @@ block content
         textarea(name='description', cols='20', rows='1', value='', placeholder='nfo', id='description')
         label(for='description') description of piece
 
-    input(type='submit', name='submit', value='❯❯ submit', id='submit', style='border:none;')
+    input(type='submit', name='submit', value='❯❯ submit', id='submit', style='border:none;', onclick='submitAlert()')
     div#tips
       |It's best to link to a static image (.png, .jpg, .gif) directly to the image, that way it will show up in fullscreen in our internal viewer (<a href="http://0p3nr3p0.net/post/ca0afbe4bf01fc8dd48e3d437ce930e9" target="blank" title="Anthi Tzakou">example</a>)<br><br>
       |When linking to a video, please use the regular, full url so it can be processed correctly.<br> (ie: <a href="http://www.youtube.com/watch?v=LVNTzsTadDA" target="blank" title="Daniel Layne">http://www.youtube.com/watch?v=LVNTzsTadDAa</a> and <a href="https://vimeo.com/47994408" target="blank" title="V5MT">https://vimeo.com/47994408</a>)<br><Br>
       |If you have trouble submitting contact <b>nickb<span></span>riz@gmail.com</b> && <b>jo<span></span>e@yo<span></span>lk.cc
+  script.
+    var tips = document.getElementById('tips');
+    function showTips() {
+      tips.style.opacity = "1";
+    }
+  block js
+    != js('scripts.js')
