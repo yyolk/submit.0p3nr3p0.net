@@ -3,7 +3,7 @@ module.exports = (app) ->
 
     # GET /
     @index = (req, res) ->
-      console.log app.helpers()
+      # console.log app.helpers()
       res.render 'index',
         view: 'index'
 
