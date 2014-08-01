@@ -10,8 +10,9 @@ block content
         a(href='/', style='border:none;margin-right:30px;') submit
         a(href='http://0p3nr3p0.net/curate', style='border:none;') curate
   .underHead
-  each error in errors
-    .message= error
+  if errors
+    each error in errors
+      .message= error
   form(action='/submit', method='POST')#create-link
     p.nfo
       img(src='/img/glitchicago.jpg', style='float:left;margin:20px;')
