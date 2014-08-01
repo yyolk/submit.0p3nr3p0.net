@@ -6,5 +6,7 @@ module.exports = (app) ->
   app.get '/*', (req, res) ->
     NotFound res
 
+  app.post '/submit', app.ApplicationController.submit
+
   NotFound = (res) ->
     res.render '404', status: 404, view: 'four-o-four'

@@ -10,7 +10,9 @@ block content
         a(href='/', style='border:none;margin-right:30px;') submit
         a(href='http://0p3nr3p0.net/curate', style='border:none;') curate
   .underHead
-  form(onsubmit="return false;")#create-link
+  each error in errors
+    .message= error
+  form(action='/submit', method='POST')#create-link
     p.nfo
       img(src='/img/glitchicago.jpg', style='float:left;margin:20px;')
       | There are no usernames + no passwords
@@ -18,36 +20,36 @@ block content
       |Every work submitted to the repo via this page will automatically be included in the <a href="http://uima-chicago.org/glitchicago-an-exhibition-of-chicago-glitch-art/">glitChicago</a> exhibition at <a href="http://uima-chicago.org/">the Ukrainian Institute of Modern Art</a> as well as be perminentally included in the 0p3nr3p0 database.
       |You will recieve a confirmation email with an edit URL should you ever need to edit your entry.
     .left
-      input(type='hidden', name='multipass', value='x', id='multipass')
+      input(type='hidden', name='multipass', value=multipass, id='multipass')
       input(type='hidden', name='show', size='77', value='glitChicago')
       div
-        input(type='text', name='url', size='77', value='', placeholder='http://', id='name')
+        input(type='text', name='url', size='77', value=url, placeholder='http://', id='url')
         label(for='url') link to work ( <a onclick="showTips()">view url tips</a> )
       div
-        input(type='text', name='title', size='77', value='', placeholder='untitled', id='title')
+        input(type='text', name='title', size='77', value=title, placeholder='untitled', id='title')
         label(for='title') title
       div
-        input(type='text', name='author', size='77', value='', placeholder='you', id='author')
+        input(type='text', name='author', size='77', value=author, placeholder='you', id='author')
         label(for='author') author
 
       div
-        input(type='text', name='tags', size='77', value='', placeholder='separate tags with spaces', id='tags')
+        input(type='text', name='tags', size='77', value=tags, placeholder='separate tags with spaces', id='tags')
         label(for='tags') tags
 
     .right
       div
-        input(type='text', name='homepage_url', value='', placeholder='http://', id='homepage_url', size='77')
+        input(type='text', name='homepage_url', value=homepage_url, placeholder='http://', id='homepage_url', size='77')
         label(for='homepage_url') your homepage
 
       div
-        input(type='text', name='email', size='77', value='', placeholder='you@inter.net', id='email')
+        input(type='text', name='email', size='77', value=email, placeholder='you@inter.net', id='email')
         label(for='email') email
 
       div
-        textarea(name='description', cols='20', rows='1', value='', placeholder='nfo', id='description')
+        textarea(name='description', cols='20', rows='1', placeholder='nfo', id='description')= description
         label(for='description') description of piece
 
-    input(type='submit', name='submit', value='❯❯ submit', id='submit', style='border:none;', onclick='submitAlert()')
+    input(type='submit', value='❯❯ submit', id='submit', style='border:none;')
     div#tips
       |It's best to link to a static image (.png, .jpg, .gif) directly to the image, that way it will show up in fullscreen in our internal viewer (<a href="http://0p3nr3p0.net/post/ca0afbe4bf01fc8dd48e3d437ce930e9" target="blank" title="Anthi Tzakou">example</a>)<br><br>
       |When linking to a video, please use the regular, full url so it can be processed correctly.<br> (ie: <a href="http://www.youtube.com/watch?v=LVNTzsTadDA" target="blank" title="Daniel Layne">http://www.youtube.com/watch?v=LVNTzsTadDAa</a> and <a href="https://vimeo.com/47994408" target="blank" title="V5MT">https://vimeo.com/47994408</a>)<br><Br>
