@@ -13,8 +13,6 @@ module.exports = (app) ->
       v = app.helpers.validator
       doc = req.body
       #first check if everything is filled out
-      # console.log 'it is: ', [v.isNull(x) for x in [doc.email, doc.url, doc.title, doc.author, doc.homepage_url, doc.description]][0]
-      # console.log false in [v.isNull(x) for x in [doc.email, doc.url, doc.title, doc.author, doc.homepage_url, doc.description]][0]
       empty_fields = true in [v.isNull(x) for x in [doc.email, doc.url, doc.title, doc.author, doc.homepage_url, doc.description]][0]
       errors = []
       if empty_fields
@@ -54,5 +52,3 @@ module.exports = (app) ->
           console.log body
           # return res.send(body)
           return res.redirect "http://gli.tc/h/0P3NR3P0_sample_gallery/email.php?email=#{doc.email}&author=#{doc.author}&multipass=#{doc.multipass}&title=#{doc.title}&url=#{doc.url}&docid=#{body.id}&irlshow=#{doc.show}"
-          #res.redirect "http://gli.tc/h/0P3NR3P0_sample_gallery/email.php?email="+body.email+"&multipass="+body.multipass+"&author="+body.author+"&title="+body.title+"&url="+uurl+"&docid="+body._id
-          #res.redirect('http://0p3nr3p0.net/submit/thankyou.html')
