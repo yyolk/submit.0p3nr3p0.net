@@ -2,6 +2,6 @@
 
 window.submitAlert = () ->
 
-  alert('0p3nr3p0 will take submissions starting August 1')
+  alert('0p3nr3p0 will take submissions for #glitChicago starting August 1 1AM PDT')
   return false
 
