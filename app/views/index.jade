@@ -8,7 +8,7 @@ block content
       .menu
         a(href='http://0p3nr3p0.net/about', style='border:none;margin-right:30px;') about
         a(href='/', style='border:none;margin-right:30px;') submit
-        a(href='http://0p3nr3p0.net/curate', style='border:none;') curate
+        a(href='http://0p3nr3p0.net/contact', style='border:none;') contact
   .underHead
   if errors
     each error in errors
@@ -16,13 +16,23 @@ block content
   form(action='/submit', method='POST')#create-link
     p.nfo
       //- img(src='/img/glitchicago.jpg', style='float:left;margin:20px;')
+      img(src='/img/netartizens.png', style='float:left;margin:20px;')
       | There are no usernames + no passwords
       br
       //- |Every work submitted to the repo via this page will automatically be included in the <a href="http://uima-chicago.org/glitchicago-an-exhibition-of-chicago-glitch-art/">glitChicago</a> exhibition at <a href="http://uima-chicago.org/">the Ukrainian Institute of Modern Art</a> as well as be perminentally included in the 0p3nr3p0 database.
-      |You will recieve a confirmation email with an edit URL should you ever need to edit your entry.
+      |Contribute to the
+      b NetArtizens Open Online Exhibition
+      |, an evolving showcase of works submitted between March 2 – April 2, 2015.
+      |Your participation as artists and citizens of the Net is in conjunction with
+      a(href="http://www.furtherfield.org/netartizens/", target="_blank") The NetArtizens Project
+      |and the
+      a(href="http://oss.adm.ntu.edu.sg/symposium2015/", target="_blank") Art of the Networked Practice | Online Symposium
+      |, March 31 – April 2.
+      br
+      em You will recieve a confirmation email with an edit URL should you ever need to edit your entry.
     .left
       input(type='hidden', name='multipass', value=multipass, id='multipass')
-      input(type='hidden', name='show', size='77', value='')
+      input(type='hidden', name='show', size='77', value='netartizens')
       div
         input(type='text', name='url', size='77', value=url, placeholder='http://', id='url')
         label(for='url') link to work ( <a onclick="showTips()">view url tips</a> )
@@ -60,5 +70,3 @@ block content
     function showTips() {
       tips.style.opacity = "1";
     }
-  block js
-    != js('scripts.js')

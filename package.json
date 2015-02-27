@@ -8,6 +8,7 @@
     "jade": "*",
     "md5": "^1.0.0",
     "nano": "~5.7.1",
+    "node-mandrill": "^1.0.1",
     "stylus": "*",
     "validator": "^3.16.1"
   },
