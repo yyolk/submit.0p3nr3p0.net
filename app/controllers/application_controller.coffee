@@ -33,7 +33,7 @@ module.exports = (app) ->
           errors.push 'Invalid URL. (Did you remember "http://" ?)'
         if not v.isURL doc.homepage_url, {require_protocol: true}
           errors.push 'Invalid Homepage URL. (Did you remember "http://" ?)'
-      do validate if app.get('env') is not 'development'
+      do validate if app.get('env') is 'production'
 
       if errors.length
         doc.errors = errors
