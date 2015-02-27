@@ -2,6 +2,8 @@
 express = require 'express'
 http = require 'http'
 app = express()
+APP_DEBUG = process.env.NODE_ENV is not 'production'
+
 
 # Boot setup
 require("#{__dirname}/../config/boot")(app)
