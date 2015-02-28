@@ -109,7 +109,15 @@ module.exports = (app) ->
             {
               email: 'nickbriz@gmail.com',
               name: 'Nick Briz'
-            }
+            },
+            {
+              email: 'RPacker@ntu.edu.sg',
+              name: 'Randall Packer'
+            },
+            {
+              email: 'ruth.catlow@furtherfield.org',
+              name: 'Ruth Catlow'
+            },
           ]
         html: app.jrenderFile new_entry_template,
           doc
