@@ -59,6 +59,6 @@
       #tips a:link, #tips a:visited, label a{ text-decoration: none; color: #ccc; border-bottom:2px dotted; }
       #tips a:hover, #tips a:active{ text-decoration: none; color: #fff; outline: 0; border:0px; cursor: pointer; }
 
-      .nfo { color: #888; width: 800px;margin-top: 10px; padding-bottom:75px; border-bottom:1px solid #888 }
+      .nfo { color: #888; width: 800px;margin-top: 10px; padding-bottom:0px; border-bottom:1px solid #888 }
 
 
