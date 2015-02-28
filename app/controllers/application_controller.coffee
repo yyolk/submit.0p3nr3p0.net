@@ -119,6 +119,7 @@ module.exports = (app) ->
         auto_text: true
       console.log doc
       new_entry_cb = (err, response, cb) ->
+        entry = res.locals.entry
         unless cb
           # return res.send 
           #   doc: doc
