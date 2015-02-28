@@ -127,3 +127,4 @@ module.exports = (app) ->
           return res.render 'thankyou.jade', {id: entry.id}
         else
           do cb
+      send_message new_entry_message, new_entry_cb
