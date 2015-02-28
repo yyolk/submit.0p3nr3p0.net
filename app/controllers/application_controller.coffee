@@ -98,6 +98,7 @@ module.exports = (app) ->
     new_entry_email = (req, res) ->
       doc = res.locals.doc
       entry = res.locals.entry
+      doc.permalink = "http://0p3nr3p0.net/piece/#{entry.id}"
       new_entry_template = 'app/templates/new_entry_email.jade'
       new_entry_message = 
         to: 
