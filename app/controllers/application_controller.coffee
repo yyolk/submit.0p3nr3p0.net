@@ -85,7 +85,8 @@ module.exports = (app) ->
           }]
         # from_email: process.env.MANDRILL_USERNAME
         html: app.jrenderFile success_template, 
-          openrepo_url: "htpp://0p3nr3p0.net/edit/#{entry.id}?multipass=#{doc.multipass}"
+          openrepo_edit_url: "http://0p3nr3p0.net/edit/#{entry.id}?multipass=#{doc.multipass}"
+          openrepo_permalink: "http://0p3nr3p0.net/piece/#{entry.id}"
         from_email: 'no-reply@0p3nr3p0.net'
         from_name: '0P3NR3P0'
         subject: 'Your 0P3NR3P0 Edit URL'

@@ -1,3 +1,22 @@
+*, *:before, *:after { -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; }
+ 
+.rwd { max-width: 100%; }
+
+
+.column {
+  float: left;
+  margin: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.column.two-thirds { width: 66.7%; }
+.column.third { width: 33.3%; }
+        
+/* ------------- Clearfix by Nicolas Gallagher ------------- */
+.clearfix:before,
+.clearfix:after { content: " "; display: table;}
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }  
 .message
     color: red
     font-size: 120%
