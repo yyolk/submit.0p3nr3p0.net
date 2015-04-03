@@ -1,6 +1,7 @@
 module.exports = (app) ->
   # Index
   app.get '/', app.ApplicationController.index
+  app.get '/closed', app.ApplicationController.closed
 
   # Error handling (No previous route found. Assuming it’s a 404)
   app.get '/*', (req, res) ->

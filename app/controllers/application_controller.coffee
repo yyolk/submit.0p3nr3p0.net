@@ -7,7 +7,10 @@ module.exports = (app) ->
       res.render 'index',
         view: 'index'
 
+    @closed = (req, res) ->
+      res.render 'closed'
     @submit = (req, res) ->
+      return res.redirect('closed')
       d = new Date()
       # return res.send(req.body)
       v = app.helpers.validator
