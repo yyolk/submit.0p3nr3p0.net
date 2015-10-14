@@ -110,19 +110,11 @@ module.exports = (app) ->
             {
               email: 'joe@yolk.cc',
               name: 'Joseph Chiocchi'
-            },
+            }
             {
               email: 'nickbriz@gmail.com',
               name: 'Nick Briz'
-            },
-            {
-              email: 'RPacker@ntu.edu.sg',
-              name: 'Randall Packer'
-            },
-            {
-              email: 'ruth.catlow@furtherfield.org',
-              name: 'Ruth Catlow'
-            },
+            }
           ]
         html: app.jrenderFile new_entry_template,
           doc
