@@ -49,12 +49,11 @@ block content
       div
         textarea(name='description', cols='20', rows='1', placeholder='nfo', id='description')= description
         label(for='description') description of piece
-
-    input(type='submit', value='❯❯ submit', id='submit', style='border:none;')
     div#tips
       |It's best to link to a static image (.png, .jpg, .gif) directly to the image, that way it will show up in fullscreen in our internal viewer (<a href="http://0p3nr3p0.net/post/ca0afbe4bf01fc8dd48e3d437ce930e9" target="blank" title="Anthi Tzakou">example</a>)<br><br>
       |When linking to a video, please use the regular, full url so it can be processed correctly.<br> (ie: <a href="http://www.youtube.com/watch?v=LVNTzsTadDA" target="blank" title="Daniel Layne">http://www.youtube.com/watch?v=LVNTzsTadDAa</a> and <a href="https://vimeo.com/47994408" target="blank" title="V5MT">https://vimeo.com/47994408</a>)<br><Br>
       |If you have trouble submitting contact <b>nickb<span></span>riz@gmail.com</b> && <b>jo<span></span>e@yo<span></span>lk.cc
+    input(type='submit', value='❯❯ submit', id='submit', style='border:none;')
   script.
     var tips = document.getElementById('tips');
     function showTips() {
