@@ -65,6 +65,7 @@ module.exports = (app) ->
             return email_on_success(req, res)
       else
         # console.log body
+        # something failed, tell me.
         doc =
           email: 'joe@yolk.cc'
           author: 'Joseph Yølk Chiocchi'
